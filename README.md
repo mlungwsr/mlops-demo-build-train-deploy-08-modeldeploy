@@ -13,8 +13,11 @@ A description of some of the artifacts is provided below:
 
 ## Layout of the SageMaker ModelBuild Project Template
 
-`buildspec.yml`
- - this file is used by the CodePipeline's Build stage to build a CloudFormation template.
+`jenkins/seed_job.groovy`
+ - this file is used to create Jenkins pipeline using `Jenkinsfile`.
+ 
+`jenkins/Jenkinsfile`
+ - this file contains pipeline definition for stages in Jenkins pipeline, and you can modify it to add/delete/update stages in the pipeline.
 
 `build.py`
  - this python file contains code to get the latest approve package arn and exports staging and configuration files. This is invoked from the Build stage.
